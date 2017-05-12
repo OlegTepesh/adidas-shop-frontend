@@ -4,8 +4,7 @@ import Sidebar from './Sidebar';
 import ProductsList from './ProductsList';
 import ProductDetail from './ProductDetail';
 
-require('normalize-css');
-require('flexboxgrid');
+import 'normalize.css';
 import './index.css';
 
 class App extends Component {
