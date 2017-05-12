@@ -1,78 +1,76 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 html {
-	font-family: 'AvenirNext';
-	font-weight: bold;
-	-webkit-font-smoothing: antialiased;
+  font-family: 'AvenirNext';
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
-	font-family: 'AndaleMono';
-	src: url(./fonts/Andale-Mono.woff) format('woff'), url(./fonts/Andale-Mono.ttf) format('ttf');
+  font-family: 'AndaleMono';
+  src: url(./fonts/Andale-Mono.woff) format('woff'), url(./fonts/Andale-Mono.ttf) format('ttf');
 }
 
 @font-face {
-	font-family: 'AvenirNext';
-	src: url(./fonts/avenir-next-regular.woff) format('woff'), url(./fonts/avenir-next-regular.svg) format('svg'), url(./fonts/avenir-next-regular.eot) format('eot');
-	font-weight: normal;
+  font-family: 'AvenirNext';
+  src: url(./fonts/avenir-next-regular.woff) format('woff'), url(./fonts/avenir-next-regular.svg) format('svg'), url(./fonts/avenir-next-regular.eot) format('eot');
+  font-weight: normal;
 }
 
 @font-face {
-	font-family: 'AvenirNext';
-	src: url(./fonts/avenir-next-bold.woff) format('woff'), url(./fonts/avenir-next-bold.svg) format('svg'), url(./fonts/avenir-next-bold.eot) format('eot');
-	font-weight: bold;
+  font-family: 'AvenirNext';
+  src: url(./fonts/avenir-next-bold.woff) format('woff'), url(./fonts/avenir-next-bold.svg) format('svg'), url(./fonts/avenir-next-bold.eot) format('eot');
+  font-weight: bold;
 }
 
 .content-wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .content-wrapper .aside {
-	flex: 28%;
-	max-width: 414px;
-	padding: 31px 22px;
-	background-color: #0e0e0e;
-	text-align: center;
-	min-height: 100vh;
+  flex: 28%;
+  max-width: 414px;
+  padding: 31px 22px;
+  background-color: #0e0e0e;
+  text-align: center;
+  min-height: 100vh;
 }
 
 .content-wrapper .aside-search {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .content-wrapper .aside-sidenav {
-	margin-top: 148px;
+  margin-top: 148px;
 }
 
 .content-wrapper .main {
-	flex: 72%;
+  flex: 72%;
 }
 
 @media (max-width: 992px) {
-	.content-wrapper {
-		flex-direction: column;
-		height: auto;
-	}
-	.content-wrapper .aside {
-		flex: 100%;
-		max-width: 100%;
-		min-height: auto;
-	}
-	.content-wrapper .aside-sidenav {
-		margin-top: 40px;
-	}
-	.content-wrapper .main {
-		flex: 100%;
-	}
+  .content-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .content-wrapper .aside {
+    flex: 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+  .content-wrapper .aside-sidenav {
+    margin-top: 40px;
+  }
+  .content-wrapper .main {
+    flex: 100%;
+  }
 }

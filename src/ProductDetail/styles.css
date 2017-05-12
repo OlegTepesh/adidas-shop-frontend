@@ -1,225 +1,222 @@
 .colortransition {
-	transition: 0.3s color ease-out;
+  transition: 0.3s color ease-out;
 }
 
 .product-detail {
-	padding: 26px 31px 115px;
-	position: relative;
+  padding: 26px 31px 115px;
+  position: relative;
 }
 
 .product-head {
-	display: flex;
-	position: absolute;
-	left: 31px;
-	right: 31px;
-	top: 26px;
-	justify-content: space-between;
+  display: flex;
+  position: absolute;
+  left: 31px;
+  right: 31px;
+  top: 26px;
+  justify-content: space-between;
 }
 
 .product-head-top-line {
-	padding-top: 9px;
+  padding-top: 9px;
 }
 
 @media (max-width: 992px) {
-	.product-head-top-line {
-		padding-top: 0;
-	}
+  .product-head-top-line {
+    padding-top: 0;
+  }
 }
 
 .product-head-name {
-	font-size: 64px;
-	color: #3a3a3a;
-	line-height: 1;
-	margin: 0 0 14px 0;
+  font-size: 64px;
+  color: #3a3a3a;
+  line-height: 1;
+  margin: 0 0 14px 0;
 }
 
 @media (max-width: 992px) {
-	.product-head-name {
-		font-size: 32px;
-	}
+  .product-head-name {
+    font-size: 32px;
+  }
 }
 
 .product-head-colors {
-	display: inline-block;
+  display: inline-block;
 }
 
 .product-head-sticker {
-	margin-left: 30px;
+  margin-left: 30px;
 }
 
 @media (max-width: 992px) {
-	.product-head-sticker {
-		margin-left: 5px;
-	}
+  .product-head-sticker {
+    margin-left: 5px;
+  }
 }
 
 .product-head-price {
-	font-size: 80px;
-	color: #e2e2e2;
-	text-align: right;
-	margin: 20px 0 0 0;
+  font-size: 80px;
+  color: #e2e2e2;
+  text-align: right;
+  margin: 20px 0 0 0;
 }
 
 @media (max-width: 992px) {
-	.product-head-price {
-		font-size: 40px;
-	}
+  .product-head-price {
+    font-size: 40px;
+  }
 }
 
 .product-photo {
-	text-align: center;
-	padding-top: 50px;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .product-photo-big img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .product-photo-previews {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-photo-previews>* {
-	border: 5px solid transparent;
+  border: 5px solid transparent;
 }
 
 @media (max-width: 992px) {
-	.product-photo-previews>* {
-		max-height: 100px;
-		max-width: 100%;
-		width: auto;
-	}
+  .product-photo-previews>* {
+    max-height: 100px;
+    max-width: 100%;
+    width: auto;
+  }
 }
 
-.product-photo-previews>img:hover,
-.product-photo-previews>.product-photo-more:hover .more-photo-hamburger {
-	border: 5px solid #e7e7e7;
+.product-photo-previews>img:hover, .product-photo-previews>.product-photo-more:hover .more-photo-hamburger {
+  border: 5px solid #e7e7e7;
 }
 
 .product-description {
-	font-size: 33px;
-	font-weight: 500;
-	line-height: 1.5;
-	color: #d8d8d8;
-	margin-bottom: 50px;
+  font-size: 33px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #d8d8d8;
+  margin-bottom: 50px;
 }
 
 .product-description .text-accent {
-	color: #6e6e6e;
+  color: #6e6e6e;
 }
 
 .more-photo {
-	display: flex;
-	align-content: center;
-	flex-wrap: nowrap;
-	min-height: 100px;
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  min-height: 100px;
 }
 
 .more-photo-hamburger {
-	width: 160px;
-	border: none;
-	background: none;
+  width: 160px;
+  border: none;
+  background: none;
 }
 
 .more-photo-hamburger-line {
-	width: 100%;
-	height: 3px;
-	border-radius: 1.5px;
-	background-color: #e7e7e7;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #e7e7e7;
 }
 
 .more-photo-hamburger-line+.more-photo-hamburger-line {
-	margin-top: 3px;
+  margin-top: 3px;
 }
 
 .more-photo-text {
-	font-size: 14px;
-	font-weight: normal;
-	color: #c0c0c0;
-	text-align: left;
-	align-self: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: #c0c0c0;
+  text-align: left;
+  align-self: center;
 }
 
 .more-photo-text>span {
-	display: block;
+  display: block;
 }
 
-.circle-button,
-.circle-button-gray {
-	width: 75px;
-	height: 75px;
-	text-transform: uppercase;
-	font-size: 18px;
-	line-height: 25px;
-	text-align: center;
-	border-radius: 50%;
-	border: none;
-	font-family: inherit;
-	font-weight: inherit;
+.circle-button, .circle-button-gray {
+  width: 75px;
+  height: 75px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
-.circle-button:focus,
-.circle-button-gray:focus {
-	outline: 0;
+.circle-button:focus, .circle-button-gray:focus {
+  outline: 0;
 }
 
 .circle-button-gray {
-	background-color: #e3e3e3;
-	color: #fff;
+  background-color: #e3e3e3;
+  color: #fff;
 }
 
 .color-picker-cirle {
-	width: 18px;
-	height: 18px;
-	border: none;
-	border-radius: 50%;
-	outline: 0;
-	margin-left: 13px;
-	cursor: pointer;
-	transition: 0.1s all ease-out;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  outline: 0;
+  margin-left: 13px;
+  cursor: pointer;
+  transition: 0.1s all ease-out;
 }
 
 .color-picker-cirle:hover {
-	opacity: 0.7;
+  opacity: 0.7;
 }
 
 .buy-now-button {
-	display: block;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	margin-left: 414px;
-	width: calc(100% - 414px);
-	height: 115px;
-	text-transform: uppercase;
-	border: none;
-	color: #fff;
-	font-size: 32px;
-	line-height: 44px;
-	font-family: inherit;
-	font-weight: bold;
-	cursor: pointer;
-	background-image: linear-gradient(to right, #4949aa, #27275d);
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 414px;
+  width: calc(100% - 414px);
+  height: 115px;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  line-height: 44px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #4949aa, #27275d);
 }
 
 .buy-now-button:hover {
-	background-image: linear-gradient(to right, #3131c4, #1a1a6b);
+  background-image: linear-gradient(to right, #3131c4, #1a1a6b);
 }
 
 @media (max-width: 1500px) {
-	.buy-now-button {
-		width: 72%;
-		margin-left: 28%;
-	}
+  .buy-now-button {
+    width: 72%;
+    margin-left: 28%;
+  }
 }
 
 @media (max-width: 992px) {
-	.buy-now-button {
-		margin-left: 0;
-		width: 100%;
-		height: 76.66666666666667px;
-	}
+  .buy-now-button {
+    margin-left: 0;
+    width: 100%;
+    height: 76.66666666666667px;
+  }
 }
