@@ -4,56 +4,62 @@ import Filters from './Filters';
 import Card from './Card';
 import ProductsGrid from './styled';
 
+const CardCol = props => (
+  <Col xs={12} sm={6} md={4} lg={3}>
+    {props.children}
+  </Col>
+);
+
 export default () => (
   <div>
     <Filters />
     <ProductsGrid>
       <Grid fluid>
         <Row>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          <CardCol>
             <Card
               img={require('./photos/shoes.jpg')}
               link="/detail"
               price="170"
               isSale
             />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          </CardCol>
+          <CardCol>
             <Card
               img={require('./photos/shoes_3.jpg')}
               link="/detail"
               price="240.99"
             />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          </CardCol>
+          <CardCol>
             <Card
               img={require('./photos/shoes.jpg')}
               link="/detail"
               price="1024"
             />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          </CardCol>
+          <CardCol>
             <Card
               img={require('./photos/shoes.jpg')}
               link="/detail"
               price="170"
             />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          </CardCol>
+          <CardCol>
             <Card
               img={require('./photos/shoes.jpg')}
               link="/detail"
               price="170"
               isSale
             />
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3}>
+          </CardCol>
+          <CardCol>
             <Card
               img={require('./photos/shoes_3.jpg')}
               link="/detail"
               price="170"
             />
-          </Col>
+          </CardCol>
         </Row>
       </Grid>
     </ProductsGrid>
