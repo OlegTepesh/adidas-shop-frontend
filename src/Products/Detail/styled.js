@@ -127,33 +127,34 @@ const PhotoSection = styled.section`
   }
 `;
 
-const BigPhoto = styled.div`
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+const BigPhotoWrapper = styled.div`
+`;
+
+const BigPhoto = styled.img`
+  max-width: 100%;
+  height: auto;
 `;
 
 const Previews = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  &>* {
-    border: 5px solid transparent;
-    margin-left: 15px;
+  @media (max-width: 992px) {
+    justify-content: flex-start;
   }
-  &>img:hover,
-  &>div:hover > button {
+`;
+
+const Photo = styled.img`
+  border: 5px solid transparent;
+  margin-left: 15px;
+  &:hover {
     border: 5px solid #e7e7e7;
   }
   @media (max-width: 992px) {
-    justify-content: flex-start;
-    &>* {
-      max-width: 100%;
-      height: 100%;
-      width: 20%;
-      margin-left: 10px;
-    }
+    max-width: 100%;
+    height: 100%;
+    width: 20%;
+    margin-left: 10px;
   }
 `;
 
@@ -162,6 +163,8 @@ const MorePhoto = styled.div`
   align-content: center;
   flex-wrap: nowrap;
   min-height: 100px;
+  border: 5px solid transparent;
+  margin-left: 15px;
   @media (max-width: 992px) {
     display: none;
   }
@@ -171,6 +174,17 @@ const HamburgerButton = styled.button`
   width: 160px;
   border: none;
   background: none;
+  border: 5px solid transparent;
+  margin-left: 15px;
+  &:hover {
+    border: 5px solid #e7e7e7;
+  }
+  @media (max-width: 992px) {
+    max-width: 100%;
+    height: 100%;
+    width: 20%;
+    margin-left: 10px;
+  }
 `;
 
 const HamburgerLine = styled.div`
@@ -190,9 +204,6 @@ const MoreText = styled.div`
   text-align: left;
   align-self: center;
   margin-left: 30px;
-  &>span {
-    display: block;
-  }
 `;
 
 const DescriptionSection = styled.section`
@@ -256,8 +267,10 @@ export {
   BottomLine,
   Price,
   PhotoSection,
+  BigPhotoWrapper,
   BigPhoto,
   Previews,
+  Photo,
   MorePhoto,
   HamburgerButton,
   HamburgerLine,

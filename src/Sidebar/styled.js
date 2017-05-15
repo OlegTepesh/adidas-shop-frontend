@@ -11,26 +11,24 @@ const BrandLogoLink = styled(Link)`
   display: inline-block;
   width: 94px;
   height: 94px;
-  & > img {
-    position: absolute;
-    width: auto;
-    height: auto;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
   @media (max-width: 992px) {
     width: 45px;
     height: 52px;
-    & > img {
-      width: inherit;
-    }
   }
 `;
 
 const BrandLogo = styled(Image)`
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @media (max-width: 992px) {
+    width: inherit;
+  }
 `;
 
 const Aside = styled.aside`

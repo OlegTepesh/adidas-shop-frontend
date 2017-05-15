@@ -13,8 +13,10 @@ import {
   BottomLine,
   Price,
   PhotoSection,
+  BigPhotoWrapper,
   BigPhoto,
   Previews,
+  Photo,
   MorePhoto,
   HamburgerButton,
   HamburgerLine,
@@ -36,7 +38,7 @@ const SeeMorePhoto = () => (
   <MorePhoto>
     <WideHamburger />
     <MoreText>
-      <span>see </span><span>more </span><span>photo</span>
+      <div>see </div><div>more </div><div>photo</div>
     </MoreText>
   </MorePhoto>
 );
@@ -70,15 +72,15 @@ export default () => (
       </HeadWrapper>
     </HeadSection>
     <PhotoSection>
-      <BigPhoto>
-        <img src={require('./photos/bitmap-copy.png')} alt="" />
-      </BigPhoto>
+      <BigPhotoWrapper>
+        <BigPhoto src={require('./photos/bitmap-copy.png')} alt="" />
+      </BigPhotoWrapper>
       <Previews>
         {' '}
-        <img src={require('./photos/bitmap_2.png')} alt="" />
-        <img src={require('./photos/bitmap.png')} alt="" />
-        <img src={require('./photos/bitmap_3.png')} alt="" />
-        <img src={require('./photos/bitmap-copy-2.png')} alt="" />
+        <Photo src={require('./photos/bitmap_2.png')} alt="" />
+        <Photo src={require('./photos/bitmap.png')} alt="" />
+        <Photo src={require('./photos/bitmap_3.png')} alt="" />
+        <Photo src={require('./photos/bitmap-copy-2.png')} alt="" />
         <SeeMorePhoto />
       </Previews>
     </PhotoSection>

@@ -1,17 +1,10 @@
 import styled from 'styled-components';
 
 const Filters = styled.section`
-  padding: 10px 25px;
+  padding: 10px 32px;
   border-bottom: 3px solid rgba(231, 231, 231, .56);
-  &>div {
-    display: inline-block;
-    vertical-align: middle;
-  }
   @media (max-width: 992px) {
     padding: 15px;
-    &>div {
-      display: block;
-    }
   }
 `;
 
@@ -28,8 +21,10 @@ const IconWrapper = styled.div`
   width: 55px;
   height: 55px;
   background-color: #ebebeb;
+  display: inline-block;
+  vertical-align: middle;
   @media (max-width: 992px) {
-    display: none !important;
+    display: none;
   }
 `;
 
@@ -57,10 +52,13 @@ const StyledButton = styled.button`
 
 const Gender = styled.div`
   margin-left: 30px;
+  display: inline-block;
+  vertical-align: middle;
   & :first-child {
     margin-right: 12px;
   }
   @media (max-width: 992px) {
+    display: block;
     margin-left: 0;
     margin-bottom: 10px;
   }
@@ -68,6 +66,8 @@ const Gender = styled.div`
 
 const Sizes = styled.div`
   margin-left: 50px;
+  display: inline-block;
+  vertical-align: middle;
   @media (max-width: 992px) {
     display: block;
     margin-left: 0;
