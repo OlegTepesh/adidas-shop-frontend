@@ -11,23 +11,32 @@ const BrandLogoLink = styled(Link)`
   display: inline-block;
   width: 94px;
   height: 94px;
+  & > img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  @media (max-width: 992px) {
+    width: 45px;
+    height: 52px;
+    & > img {
+      width: inherit;
+    }
+  }
 `;
 
 const BrandLogo = styled(Image)`
-  position: absolute;
-  width: auto;
-  height: auto;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 `;
 
 const Aside = styled.aside`
   flex: 28%;
   max-width: 414px;
-  padding: 31px 22px;
+  padding: 30px 22px;
   background-color: #0e0e0e;
   text-align: center;
   min-height: 100vh;
@@ -35,11 +44,15 @@ const Aside = styled.aside`
     flex: 100%;
     max-width: 100%;
     min-height: auto;
+    height: 64px;
+    overflow: hidden;
+    text-align: left;
+    padding: 6px 15px;
   }
 `;
 
 const Nav = styled.nav`
-  margin-top: 148px;
+  margin-top: 150px;
   @media (max-width: 992px) {
     margin-top: 40px;
   }

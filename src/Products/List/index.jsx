@@ -5,7 +5,7 @@ import Card from './Card';
 import ProductsGrid from './styled';
 
 const CardCol = props => (
-  <Col xs={12} sm={6} md={4} lg={3}>
+  <Col xs={12} sm={6} md={6} lg={3}>
     {props.children}
   </Col>
 );
@@ -18,7 +18,7 @@ export default () => (
         <Row>
           <CardCol>
             <Card
-              img={require('./photos/shoes.jpg')}
+              img={require('./photos/shoes@2x.jpg')}
               link="/detail"
               price="170"
               isSale
@@ -26,28 +26,28 @@ export default () => (
           </CardCol>
           <CardCol>
             <Card
-              img={require('./photos/shoes_3.jpg')}
+              img={require('./photos/shoes_3@2x.jpg')}
               link="/detail"
               price="240.99"
             />
           </CardCol>
           <CardCol>
             <Card
-              img={require('./photos/shoes.jpg')}
+              img={require('./photos/shoes@2x.jpg')}
               link="/detail"
               price="1024"
             />
           </CardCol>
           <CardCol>
             <Card
-              img={require('./photos/shoes.jpg')}
+              img={require('./photos/shoes@2x.jpg')}
               link="/detail"
               price="170"
             />
           </CardCol>
           <CardCol>
             <Card
-              img={require('./photos/shoes.jpg')}
+              img={require('./photos/shoes_2@2x.jpg')}
               link="/detail"
               price="170"
               isSale
@@ -55,7 +55,7 @@ export default () => (
           </CardCol>
           <CardCol>
             <Card
-              img={require('./photos/shoes_3.jpg')}
+              img={require('./photos/shoes_3@2x.jpg')}
               link="/detail"
               price="170"
             />

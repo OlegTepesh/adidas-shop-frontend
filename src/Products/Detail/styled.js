@@ -1,29 +1,47 @@
 import styled from 'styled-components';
 
 const Detail = styled.div`
-  padding: 26px 31px 115px;
+  padding: 25px 30px 115px;
   position: relative;
+  @media (max-width: 992px) {
+    padding: 35px 15px 75px;
+  }
 `;
 
 const HeadSection = styled.section`
   display: flex;
   position: absolute;
-  left: 31px;
-  right: 31px;
-  top: 26px;
+  left: 30px;
+  right: 30px;
+  top: 20px;
   justify-content: space-between;
+  @media (max-width: 992px) {
+    display: block;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
 `;
 
 const HeadWrapper = styled.div`
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 const Name = styled.h1`
   font-size: 64px;
   color: #3a3a3a;
   line-height: 1;
-  margin: 0 0 14px 0;
+  margin: 0 0 15px 0;
   @media (max-width: 992px) {
-    font-size: 32px;
+    font-size: 36px;
+    margin-bottom: 10px;
+    & > br {
+      display: none;
+    }
   }
 `;
 
@@ -43,12 +61,19 @@ const CircleButton = styled.button`
   &:focus {
     outline: 0;
   }
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const TopLine = styled.div`
-  padding-top: 9px;
+  padding-top: 10px;
   @media (max-width: 992px) {
     padding-top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
@@ -62,7 +87,7 @@ const ColorPicker = styled.button`
   border: none;
   border-radius: 50%;
   outline: 0;
-  margin-left: 13px;
+  margin-left: 15px;
   cursor: pointer;
   transition: 0.1s all ease-out;
   background-color: ${props => props.color};
@@ -88,13 +113,18 @@ const Price = styled.h2`
   text-align: right;
   margin: 20px 0 0 0;
   @media (max-width: 992px) {
-    font-size: 40px;
+    line-height: 1;
+    text-align: left;
+    margin: 0 0 10px 0;
   }
 `;
 
 const PhotoSection = styled.section`
   text-align: center;
   padding-top: 50px;
+  @media (max-width: 992px) {
+    padding-top: 15px;
+  }
 `;
 
 const BigPhoto = styled.div`
@@ -110,16 +140,19 @@ const Previews = styled.div`
   justify-content: center;
   &>* {
     border: 5px solid transparent;
+    margin-left: 15px;
   }
   &>img:hover,
   &>div:hover > button {
     border: 5px solid #e7e7e7;
   }
   @media (max-width: 992px) {
+    justify-content: flex-start;
     &>* {
-      max-height: 100px;
       max-width: 100%;
-      width: auto;
+      height: 100%;
+      width: 20%;
+      margin-left: 10px;
     }
   }
 `;
@@ -129,6 +162,9 @@ const MorePhoto = styled.div`
   align-content: center;
   flex-wrap: nowrap;
   min-height: 100px;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const HamburgerButton = styled.button`
@@ -153,6 +189,7 @@ const MoreText = styled.div`
   color: #c0c0c0;
   text-align: left;
   align-self: center;
+  margin-left: 30px;
   &>span {
     display: block;
   }
@@ -164,6 +201,11 @@ const DescriptionSection = styled.section`
   line-height: 1.5;
   color: #d8d8d8;
   margin-bottom: 50px;
+  @media (max-width: 992px) {
+    line-height: 1.4;
+    font-size: 20px;
+    margin-top: 25px;
+  }
 `;
 
 const TextAccent = styled.span`
@@ -190,14 +232,14 @@ const BuyNowButton = styled.button`
   &:hover {
     background-image: linear-gradient(to right, #3131c4, #1a1a6b);
   }
-  @media (max-width: 1500px) {
+  @media (max-width: 1480px) {
     width: 72%;
     margin-left: 28%;
   }
   @media (max-width: 992px) {
     margin-left: 0;
     width: 100%;
-    height: 76.66666666666667px;
+    height: 74px;
   }
 `;
 

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Label from '../../../components/Label';
 
 const StyledCardLink = styled(Link)`
-  max-width: 312px;
-  max-height: 312px;
   background-color: #f4f4f4;
   padding: 9px;
   text-align: center;
@@ -17,6 +15,9 @@ const StyledCardLink = styled(Link)`
   transition: 0.2s all ease-out;
   &:hover {
     background-color: #e3e3e3;
+  }
+  @media (max-width: 992px) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -35,14 +36,14 @@ const CardLabel = styled(Label)`
 const ProductPhoto = styled.img`
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 `;
 
 const Price = styled.span`
   margin-top: 6px;
   font-size: 30px;
-  line-height: 41px;
-  height: 91px;
+  line-height: 40px;
+  height: 90px;
   display: block;
   background: #fff;
   color: ${props => (props.isSale ? '#fff' : '#111')};

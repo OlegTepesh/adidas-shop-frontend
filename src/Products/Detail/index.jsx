@@ -71,14 +71,14 @@ export default () => (
     </HeadSection>
     <PhotoSection>
       <BigPhoto>
-        <img src={require('./photos/bitmap-copy.jpg')} alt="" />
+        <img src={require('./photos/bitmap-copy.png')} alt="" />
       </BigPhoto>
       <Previews>
         {' '}
-        <img src={require('./photos/bitmap_2.jpg')} alt="" />
-        <img src={require('./photos/bitmap.jpg')} alt="" />
-        <img src={require('./photos/bitmap_3.jpg')} alt="" />
-        <img src={require('./photos/bitmap-copy-2.jpg')} alt="" />
+        <img src={require('./photos/bitmap_2.png')} alt="" />
+        <img src={require('./photos/bitmap.png')} alt="" />
+        <img src={require('./photos/bitmap_3.png')} alt="" />
+        <img src={require('./photos/bitmap-copy-2.png')} alt="" />
         <SeeMorePhoto />
       </Previews>
     </PhotoSection>
