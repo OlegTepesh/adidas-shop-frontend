@@ -38,12 +38,14 @@ const Aside = styled.aside`
   background-color: #0e0e0e;
   text-align: center;
   min-height: 100vh;
+  position: relative;
+  transition: .3s all ease-out;
   @media (max-width: 992px) {
     flex: 100%;
     max-width: 100%;
     min-height: auto;
-    height: 64px;
-    overflow: hidden;
+    height: ${props => (props.isOpen ? 'auto' : '64px')};
+    overflow: ${props => (props.isOpen ? 'visible' : 'hidden')};
     text-align: left;
     padding: 6px 15px;
   }
@@ -53,6 +55,8 @@ const Nav = styled.nav`
   margin-top: 150px;
   @media (max-width: 992px) {
     margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
   }
 `;
 
@@ -103,6 +107,19 @@ const Element = styled(Link)`
   }
 `;
 
+const Hamburger = styled.div`
+  display: none;
+  @media (max-width: 992px) {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 17px;
+    width: 50px;
+    height: 30px;
+  }
+`;
+
 export {
   SearchWrapper,
   BrandLogo,
@@ -112,4 +129,5 @@ export {
   CategoryLink,
   ElementsList,
   Element,
+  Hamburger,
 };
