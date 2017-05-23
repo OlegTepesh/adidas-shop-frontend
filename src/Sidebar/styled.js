@@ -60,33 +60,35 @@ const Nav = styled.nav`
   }
 `;
 
-const ElementsToggleAfter = `
-  &:after {
-    content: ' ';
-    width: 15px;
-    height: 15px;
-    background: url(./group-2.png) no-repeat;
-    position: absolute;
-    top: 13px;
-    margin-left: 7px;
-  }
+const CategoryStyled = styled.div`
+  margin-top: 30px;
 `;
 
-const CategoryStyled = styled.div`
+const Title = styled.span`
   transition: 0.3s color ease-out;
   position: relative;
   display: block;
   font-size: 24px;
   line-height: 33px;
-  color: ${props => (props.isActive ? '#fff' : '#303030')};
-  text-decoration: none;
-  margin-top: 30px;
+  color: #fff;
   text-transform: uppercase;
   cursor: pointer;
   &:hover {
     color: #fff;
   }
-  ${props => props.hasElements && ElementsToggleAfter}
+  &:after {
+    content: ' ';
+    width: 14px;
+    height: 9px;
+    background: url(${require('./group-2.png')}) no-repeat;
+    position: absolute;
+    top: 12px;
+    margin-left: 7px;
+    transition: 0.2s transform ease-out;
+    ${props => props.isActive && `
+      transform: rotateX(180deg);
+    `}
+  }
 `;
 
 const ElementsList = styled.div`
@@ -100,6 +102,7 @@ const ElementsList = styled.div`
 
 const Element = styled(Link)`
   display: block;
+  text-transform: uppercase;
   transition: 0.3s color ease-out;
   color: ${props => (props.isActive ? '#fff' : '#3c3c3c')};
   text-decoration: none;
@@ -129,6 +132,7 @@ export {
   Aside,
   Nav,
   CategoryStyled,
+  Title,
   ElementsList,
   Element,
   Hamburger,
