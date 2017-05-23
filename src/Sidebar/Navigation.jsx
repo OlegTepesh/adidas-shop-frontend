@@ -1,3 +1,5 @@
+/* eslint react/no-multi-comp: 0 */
+
 import React, { Component } from 'react';
 import { Nav, CategoryStyled, ElementsList, Element } from './styled';
 
