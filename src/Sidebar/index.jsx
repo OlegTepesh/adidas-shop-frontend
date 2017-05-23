@@ -21,9 +21,7 @@ export default class Sidebar extends Component {
   }
 
   handleClick() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    });
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
   render() {
