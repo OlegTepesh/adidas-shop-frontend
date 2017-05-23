@@ -72,7 +72,7 @@ const ElementsToggleAfter = `
   }
 `;
 
-const CategoryLink = styled(Link)`
+const CategoryStyled = styled.div`
   transition: 0.3s color ease-out;
   position: relative;
   display: block;
@@ -81,6 +81,8 @@ const CategoryLink = styled(Link)`
   color: ${props => (props.isActive ? '#fff' : '#303030')};
   text-decoration: none;
   margin-top: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
   &:hover {
     color: #fff;
   }
@@ -126,7 +128,7 @@ export {
   BrandLogoLink,
   Aside,
   Nav,
-  CategoryLink,
+  CategoryStyled,
   ElementsList,
   Element,
   Hamburger,
