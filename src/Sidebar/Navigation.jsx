@@ -1,10 +1,10 @@
 import React from 'react';
-import Category from './Category';
+import Menu from './Menu';
 import { Nav, ElementsList, Element } from './styled';
 
 export default () => (
   <Nav>
-    <Category title="football" isActive>
+    <Menu title="football" isActive>
       <ElementsList>
         <Element to="#">
           shoes
@@ -16,8 +16,8 @@ export default () => (
           accessories
         </Element>
       </ElementsList>
-    </Category>
-    <Category title="running">
+    </Menu>
+    <Menu title="running">
       <ElementsList>
         <Element to="#">
           shoes
@@ -29,8 +29,8 @@ export default () => (
           accessories
         </Element>
       </ElementsList>
-    </Category>
-    <Category title="basketball">
+    </Menu>
+    <Menu title="basketball">
       <ElementsList>
         <Element to="#">
           shoes
@@ -42,6 +42,6 @@ export default () => (
           accessories
         </Element>
       </ElementsList>
-    </Category>
+    </Menu>
   </Nav>
 );

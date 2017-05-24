@@ -60,11 +60,13 @@ const Nav = styled.nav`
   }
 `;
 
-const CategoryStyled = styled.div`
+const MenuStyled = styled.div`
   margin-top: 30px;
 `;
 
-const Title = styled.span`
+const Dropdown = styled.button`
+  border: none;
+  outline: 0;
   transition: 0.3s color ease-out;
   position: relative;
   display: block;
@@ -73,6 +75,9 @@ const Title = styled.span`
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  margin: auto;
+  background: none;
+  font-weight: bold;
   &:hover {
     color: #fff;
   }
@@ -131,8 +136,8 @@ export {
   BrandLogoLink,
   Aside,
   Nav,
-  CategoryStyled,
-  Title,
+  MenuStyled,
+  Dropdown,
   ElementsList,
   Element,
   Hamburger,

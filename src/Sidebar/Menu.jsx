@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { CategoryStyled, Title } from './styled';
+import { MenuStyled, Dropdown } from './styled';
 
-export default class Category extends Component {
+export default class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isActive: props.isActive || false,
+      isActive: false,
     };
   }
 
@@ -15,15 +15,15 @@ export default class Category extends Component {
 
   render() {
     return (
-      <CategoryStyled>
-        <Title
+      <MenuStyled>
+        <Dropdown
           onClick={() => this.handleClick()}
           isActive={this.state.isActive}
         >
           {this.props.title}
-        </Title>
+        </Dropdown>
         {this.state.isActive && this.props.children}
-      </CategoryStyled>
+      </MenuStyled>
     );
   }
 }
