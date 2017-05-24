@@ -62,6 +62,9 @@ const Nav = styled.nav`
 
 const MenuStyled = styled.div`
   margin-top: 30px;
+  ${props => props.isActive && `
+    padding-bottom: 20px;
+  `}
 `;
 
 const Dropdown = styled.button`
@@ -96,28 +99,23 @@ const Dropdown = styled.button`
   }
 `;
 
-const List = styled.div`
-  margin-top: 15px;
-  margin-bottom: 50px;
+const StLink = styled(Link)`
+  display: block;
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 27px;
   font-family: 'AndaleMono';
   font-weight: normal;
-`;
-
-const ItemLink = styled(Link)`
-  display: block;
-  text-transform: uppercase;
   transition: 0.3s color ease-out;
   color: ${props => (props.isActive ? '#fff' : '#3c3c3c')};
   text-decoration: none;
-  margin-bottom: 25px;
+  margin-top: 25px;
   &:hover {
     color: #fff;
   }
 `;
 
-const Hamburger = styled.div`
+const MenuButton = styled.div`
   display: none;
   @media (max-width: 992px) {
     cursor: pointer;
@@ -138,7 +136,6 @@ export {
   Nav,
   MenuStyled,
   Dropdown,
-  List,
-  ItemLink,
-  Hamburger,
+  StLink,
+  MenuButton,
 };

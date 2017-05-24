@@ -15,7 +15,7 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <MenuStyled>
+      <MenuStyled isActive={this.state.isActive}>
         <Dropdown
           onClick={() => this.handleClick()}
           isActive={this.state.isActive}

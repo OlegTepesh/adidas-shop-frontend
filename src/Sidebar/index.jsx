@@ -6,7 +6,7 @@ import {
   BrandLogo,
   BrandLogoLink,
   Aside,
-  Hamburger,
+  MenuButton,
 } from './styled';
 
 export default class Sidebar extends Component {
@@ -26,14 +26,14 @@ export default class Sidebar extends Component {
       <Aside isOpen={this.state.isOpen}>
         <BrandLogoLink to="/">
           <BrandLogo
-            src={require('./logo.png')}
-            x2={require('./logo@2x.png')}
-            x3={require('./logo@3x.png')}
+            src={require('./logo.svg')}
+            x2={require('./logo.svg')}
+            x3={require('./logo.svg')}
           />
         </BrandLogoLink>
-        <Hamburger onClick={() => this.handleClick()}>
+        <MenuButton onClick={() => this.handleClick()}>
           <img src={require('./menu.svg')} alt="" />
-        </Hamburger>
+        </MenuButton>
         <SearchWrapper>
           <Search />
         </SearchWrapper>
