@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Image from '../components/Image';
-
-const SearchWrapper = styled.div`
-  margin-top: 20px;
-`;
 
 const BrandLogoLink = styled(Link)`
   position: relative;
@@ -17,7 +12,7 @@ const BrandLogoLink = styled(Link)`
   }
 `;
 
-const BrandLogo = styled(Image)`
+const BrandLogo = styled.img`
   position: absolute;
   width: auto;
   height: auto;
@@ -60,7 +55,7 @@ const Nav = styled.nav`
   }
 `;
 
-const MenuStyled = styled.div`
+const StyledMenu = styled.div`
   margin-top: 30px;
   ${props => props.isActive && `
     padding-bottom: 20px;
@@ -99,7 +94,7 @@ const Dropdown = styled.button`
   }
 `;
 
-const StLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: block;
   text-transform: uppercase;
   font-size: 24px;
@@ -115,8 +110,11 @@ const StLink = styled(Link)`
   }
 `;
 
-const MenuButton = styled.div`
+const MenuButton = styled.button`
   display: none;
+  outline: 0;
+  background: none;
+  border: none;
   @media (max-width: 992px) {
     cursor: pointer;
     display: inline-block;
@@ -129,13 +127,12 @@ const MenuButton = styled.div`
 `;
 
 export {
-  SearchWrapper,
   BrandLogo,
   BrandLogoLink,
   Aside,
   Nav,
-  MenuStyled,
+  StyledMenu,
   Dropdown,
-  StLink,
+  StyledLink,
   MenuButton,
 };

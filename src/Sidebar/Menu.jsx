@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { MenuStyled, Dropdown } from './styled';
+import { StyledMenu as Menu, Dropdown } from './styled';
 
-export default class Menu extends Component {
+export default class extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,21 +9,18 @@ export default class Menu extends Component {
     };
   }
 
-  handleClick() {
+  toggle() {
     this.setState(prevState => ({ isActive: !prevState.isActive }));
   }
 
   render() {
     return (
-      <MenuStyled isActive={this.state.isActive}>
-        <Dropdown
-          onClick={() => this.handleClick()}
-          isActive={this.state.isActive}
-        >
+      <Menu isActive={this.state.isActive}>
+        <Dropdown onClick={() => this.toggle()} isActive={this.state.isActive}>
           {this.props.title}
         </Dropdown>
         {this.state.isActive && this.props.children}
-      </MenuStyled>
+      </Menu>
     );
   }
 }

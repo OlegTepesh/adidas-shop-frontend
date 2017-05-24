@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import Navigation from './Navigation';
-import {
-  SearchWrapper,
-  BrandLogo,
-  BrandLogoLink,
-  Aside,
-  MenuButton,
-} from './styled';
+import { BrandLogo, BrandLogoLink, Aside, MenuButton } from './styled';
 
 export default class Sidebar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: true,
+      isOpen: false,
     };
   }
 
@@ -25,18 +19,12 @@ export default class Sidebar extends Component {
     return (
       <Aside isOpen={this.state.isOpen}>
         <BrandLogoLink to="/">
-          <BrandLogo
-            src={require('./logo.svg')}
-            x2={require('./logo.svg')}
-            x3={require('./logo.svg')}
-          />
+          <BrandLogo src={require('./logo.svg')} />
         </BrandLogoLink>
         <MenuButton onClick={() => this.handleClick()}>
           <img src={require('./menu.svg')} alt="" />
         </MenuButton>
-        <SearchWrapper>
-          <Search />
-        </SearchWrapper>
+        <Search />
         <Navigation />
       </Aside>
     );
