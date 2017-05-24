@@ -6,6 +6,7 @@ const SeacrhInput = styled.input`
   font-size: 22px;
   line-height: 50px;
   padding: 0 15px 0 50px;
+  margin-top: 20px;
   width: 100%;
   height: 50px;
   background: url(${require('./group.png')}) 14px center/28px 30px no-repeat;
