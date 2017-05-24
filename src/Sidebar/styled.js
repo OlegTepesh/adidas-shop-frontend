@@ -96,7 +96,7 @@ const Dropdown = styled.button`
   }
 `;
 
-const ElementsList = styled.div`
+const List = styled.div`
   margin-top: 15px;
   margin-bottom: 50px;
   font-size: 24px;
@@ -105,7 +105,7 @@ const ElementsList = styled.div`
   font-weight: normal;
 `;
 
-const Element = styled(Link)`
+const ItemLink = styled(Link)`
   display: block;
   text-transform: uppercase;
   transition: 0.3s color ease-out;
@@ -138,7 +138,7 @@ export {
   Nav,
   MenuStyled,
   Dropdown,
-  ElementsList,
-  Element,
+  List,
+  ItemLink,
   Hamburger,
 };
