@@ -1,41 +1,41 @@
 import React from 'react';
 import Menu from './Menu';
-import { Nav, StLink } from './styled';
+import { Nav, StLink as Link } from './styled';
 
 export default () => (
   <Nav>
     <Menu title="football">
-      <StLink to="#">
+      <Link to="#">
         shoes
-      </StLink>
-      <StLink to="#">
+      </Link>
+      <Link to="#">
         clothing
-      </StLink>
-      <StLink to="#">
+      </Link>
+      <Link to="#">
         accessories
-      </StLink>
+      </Link>
     </Menu>
     <Menu title="running">
-      <StLink to="#">
+      <Link to="#">
         shoes
-      </StLink>
-      <StLink to="#">
+      </Link>
+      <Link to="#">
         clothing
-      </StLink>
-      <StLink to="#">
+      </Link>
+      <Link to="#">
         accessories
-      </StLink>
+      </Link>
     </Menu>
     <Menu title="basketball">
-      <StLink to="#">
+      <Link to="#">
         shoes
-      </StLink>
-      <StLink to="#">
+      </Link>
+      <Link to="#">
         clothing
-      </StLink>
-      <StLink to="#">
+      </Link>
+      <Link to="#">
         accessories
-      </StLink>
+      </Link>
     </Menu>
   </Nav>
 );
