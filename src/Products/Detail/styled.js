@@ -77,11 +77,11 @@ const TopLine = styled.div`
   }
 `;
 
-const ColorPickerWrapper = styled.div`
+const ColorPicker = styled.div`
   display: inline-block;
 `;
 
-const ColorPicker = styled.button`
+const Color = styled.button`
   width: 18px;
   height: 18px;
   border: none;
@@ -213,8 +213,8 @@ export {
   Name,
   CircleButton,
   TopLine,
-  ColorPickerWrapper,
   ColorPicker,
+  Color,
   LabelWrapper,
   BottomLine,
   Price,

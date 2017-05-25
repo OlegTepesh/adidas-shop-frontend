@@ -1,5 +1,6 @@
 import React from 'react';
 import Label from '../../components/Label';
+import ColorPicker from './ColorPicker';
 import {
   Detail,
   HeadSection,
@@ -7,8 +8,6 @@ import {
   Name,
   CircleButton,
   TopLine,
-  ColorPickerWrapper,
-  ColorPicker,
   LabelWrapper,
   BottomLine,
   Price,
@@ -35,12 +34,7 @@ export default () => (
       </HeadWrapper>
       <HeadWrapper>
         <TopLine>
-          <ColorPickerWrapper>
-            <ColorPicker color="#c5c5c5" />
-            <ColorPicker color="#4d87ca" />
-            <ColorPicker color="#4a4a4a" />
-            <ColorPicker color="#e0e0e0" />
-          </ColorPickerWrapper>
+          <ColorPicker />
           <LabelWrapper>
             <Label />
           </LabelWrapper>
