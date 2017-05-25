@@ -21,11 +21,13 @@ import {
   BuyNowButton,
 } from './styled';
 
+const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
+
 export default class extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: '',
+      color: colors[0],
     };
   }
 
@@ -48,6 +50,7 @@ export default class extends Component {
           <HeadWrapper>
             <TopLine>
               <ColorPicker
+                colors={colors}
                 onChange={(color) => {
                   this.setColor(color);
                 }}
