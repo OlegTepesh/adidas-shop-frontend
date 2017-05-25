@@ -31,12 +31,12 @@ export default class extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: colors[0],
+      colorIndex: 0,
     };
   }
 
-  handleChangeColor(color) {
-    this.setState({ color });
+  handleChangeColor(i) {
+    this.setState({ colorIndex: i });
   }
 
   render() {
@@ -47,7 +47,7 @@ export default class extends Component {
             <Name>
               ULTRA <br />BOOST
             </Name>
-            <CircleButton color={this.state.color}>
+            <CircleButton color={colors[this.state.colorIndex]}>
               Save
             </CircleButton>
           </HeadWrapper>
@@ -55,8 +55,8 @@ export default class extends Component {
             <TopLine>
               <ColorPicker
                 colors={colors}
-                onChange={(color) => {
-                  this.handleChangeColor(color);
+                onChange={(i) => {
+                  this.handleChangeColor(i);
                 }}
               />
               <LabelWrapper>
@@ -64,7 +64,7 @@ export default class extends Component {
               </LabelWrapper>
             </TopLine>
             <BottomLine>
-              <Price color={this.state.color}>170$</Price>
+              <Price color={colors[this.state.colorIndex]}>170$</Price>
             </BottomLine>
           </HeadWrapper>
         </HeadSection>

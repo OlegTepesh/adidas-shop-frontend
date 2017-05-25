@@ -3,12 +3,12 @@ import { ColorPicker, Color } from './styled';
 
 export default props => (
   <ColorPicker>
-    {props.colors.map(color => (
+    {props.colors.map((color, i) => (
       <Color
         key={color}
         color={color}
         onClick={() => {
-          props.onChange(color);
+          props.onChange(i);
         }}
       />
     ))}
