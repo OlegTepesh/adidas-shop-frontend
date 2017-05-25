@@ -17,31 +17,10 @@ import {
   BigPhoto,
   Previews,
   Photo,
-  MorePhoto,
-  HamburgerButton,
-  HamburgerLine,
-  MoreText,
   DescriptionSection,
   TextAccent,
   BuyNowButton,
 } from './styled';
-
-const WideHamburger = () => (
-  <HamburgerButton>
-    <HamburgerLine />
-    <HamburgerLine />
-    <HamburgerLine />
-  </HamburgerButton>
-);
-
-const SeeMorePhoto = () => (
-  <MorePhoto>
-    <WideHamburger />
-    <MoreText>
-      <div>see </div><div>more </div><div>photo</div>
-    </MoreText>
-  </MorePhoto>
-);
 
 export default () => (
   <Detail>
@@ -81,7 +60,6 @@ export default () => (
         <Photo src={require('./photos/bitmap.png')} alt="" />
         <Photo src={require('./photos/bitmap_3.png')} alt="" />
         <Photo src={require('./photos/bitmap-copy-2.png')} alt="" />
-        <SeeMorePhoto />
       </Previews>
     </PhotoSection>
     <DescriptionSection>

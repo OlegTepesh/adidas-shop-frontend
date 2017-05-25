@@ -158,54 +158,6 @@ const Photo = styled.img`
   }
 `;
 
-const MorePhoto = styled.div`
-  display: flex;
-  align-content: center;
-  flex-wrap: nowrap;
-  min-height: 100px;
-  border: 5px solid transparent;
-  margin-left: 15px;
-  @media (max-width: 992px) {
-    display: none;
-  }
-`;
-
-const HamburgerButton = styled.button`
-  width: 160px;
-  border: none;
-  background: none;
-  border: 5px solid transparent;
-  margin-left: 15px;
-  &:hover {
-    border: 5px solid #e7e7e7;
-  }
-  @media (max-width: 992px) {
-    max-width: 100%;
-    height: 100%;
-    width: 20%;
-    margin-left: 10px;
-  }
-`;
-
-const HamburgerLine = styled.div`
-  width: 100%;
-  height: 3px;
-  border-radius: 1.5px;
-  background-color: #e7e7e7;
-  &+& {
-    margin-top: 3px;
-  }
-`;
-
-const MoreText = styled.div`
-  font-size: 14px;
-  font-weight: normal;
-  color: #c0c0c0;
-  text-align: left;
-  align-self: center;
-  margin-left: 30px;
-`;
-
 const DescriptionSection = styled.section`
   font-size: 33px;
   font-weight: 500;
@@ -271,10 +223,6 @@ export {
   BigPhoto,
   Previews,
   Photo,
-  MorePhoto,
-  HamburgerButton,
-  HamburgerLine,
-  MoreText,
   DescriptionSection,
   TextAccent,
   BuyNowButton,
