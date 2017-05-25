@@ -136,6 +136,7 @@ const BigPhoto = styled.img`
   max-width: 100%;
   height: auto;
   max-height: 525px;
+  transition: .2s all ease-out;
 `;
 
 const Previews = styled.div`
@@ -149,11 +150,12 @@ const Previews = styled.div`
 `;
 
 const Photo = styled.img`
-  border: 5px solid transparent;
+  border: ${props => (props.isActive ? '5px solid #e7e7e7' : '5px solid transparent')};
   margin-left: 15px;
   margin-top: 10px;
   max-height: 130px;
   cursor: pointer;
+  transition: .2s all ease-out;
   &:hover {
     border: 5px solid #e7e7e7;
   }

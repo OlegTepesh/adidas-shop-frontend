@@ -10,25 +10,33 @@ import {
 export default class extends Component {
   constructor(props) {
     super(props);
-    this.state = { activePhoto: this.props.photos[0] };
+    this.state = {
+      activePhotoIndex: 0,
+    };
   }
 
-  handleChangePhoto(photo) {
-    this.setState({ activePhoto: photo });
+  handleChangePhoto(i) {
+    this.setState({
+      activePhotoIndex: i,
+    });
   }
 
   render() {
     return (
       <PhotoSection>
         <BigPhotoWrapper>
-          <BigPhoto src={this.state.activePhoto} alt="" />
+          <BigPhoto
+            src={this.props.photos[this.state.activePhotoIndex]}
+            alt=""
+          />
         </BigPhotoWrapper>
-        <Previews>
-          {this.props.photos.map(photo => (
+        <Previews activePhotoIndex={this.state.activePhotoIndex}>
+          {this.props.photos.map((photo, i) => (
             <Photo
               key={photo}
               src={photo}
-              onClick={() => this.handleChangePhoto(photo)}
+              isActive={this.state.activePhotoIndex === i}
+              onClick={() => this.handleChangePhoto(i)}
               alt=""
             />
           ))}
