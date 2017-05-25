@@ -1,12 +1,18 @@
 import React from 'react';
-
 import { ColorPicker, Color } from './styled';
 
-export default () => (
+const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
+
+export default props => (
   <ColorPicker>
-    <Color color="#c5c5c5" />
-    <Color color="#4d87ca" />
-    <Color color="#4a4a4a" />
-    <Color color="#e0e0e0" />
+    {colors.map(color => (
+      <Color
+        key={color}
+        color={color}
+        onClick={() => {
+          props.onChange(color);
+        }}
+      />
+    ))}
   </ColorPicker>
 );

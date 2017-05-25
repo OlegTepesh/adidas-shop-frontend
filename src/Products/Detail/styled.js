@@ -53,10 +53,11 @@ const CircleButton = styled.button`
   line-height: 25px;
   text-align: center;
   border-radius: 50%;
+  transition: .2s all ease-out;
   border: none;
   font-family: inherit;
   font-weight: inherit;
-  background-color: #e3e3e3;
+  background-color: ${props => (props.color ? props.color : '#e3e3e3')};
   color: #fff;
   &:focus {
     outline: 0;
@@ -109,9 +110,10 @@ const BottomLine = styled.div`
 
 const Price = styled.h2`
   font-size: 80px;
-  color: #e2e2e2;
   text-align: right;
   margin: 20px 0 0 0;
+  transition: .2s all ease-out;
+  color: ${props => (props.color ? props.color : '#e2e2e2')};
   @media (max-width: 992px) {
     line-height: 1;
     text-align: left;
