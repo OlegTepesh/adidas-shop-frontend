@@ -135,9 +135,11 @@ const BigPhotoWrapper = styled.div`
 const BigPhoto = styled.img`
   max-width: 100%;
   height: auto;
+  max-height: 525px;
 `;
 
 const Previews = styled.div`
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -149,6 +151,9 @@ const Previews = styled.div`
 const Photo = styled.img`
   border: 5px solid transparent;
   margin-left: 15px;
+  margin-top: 10px;
+  max-height: 130px;
+  cursor: pointer;
   &:hover {
     border: 5px solid #e7e7e7;
   }
