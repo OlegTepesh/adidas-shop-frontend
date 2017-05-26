@@ -42,7 +42,10 @@ const Aside = styled.aside`
     height: ${props => (props.isOpen ? 'auto' : '64px')};
     overflow: ${props => (props.isOpen ? 'visible' : 'hidden')};
     text-align: left;
-    padding: 6px 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 `;
 
@@ -121,11 +124,11 @@ const MenuButton = styled.button`
   border: none;
   @media (max-width: 992px) {
     cursor: pointer;
-    display: inline-block;
+    display: block;
     position: absolute;
-    right: 15px;
+    right: 2.5rem;
     top: 17px;
-    width: 50px;
+    width: 40px;
     height: 30px;
   }
 `;

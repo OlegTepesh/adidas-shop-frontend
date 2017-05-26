@@ -14,10 +14,12 @@ export default () => (
         <Sidebar />
         <Main>
           <Route exact path="/" component={ProductsList} />
-          <Route path="/detail" component={ProductsDetail} />
-
           <Route exact path="/products/:group/:type" component={ProductsList} />
-          <Route exact path="/products/:id" component={ProductsDetail} />
+          <Route
+            exact
+            path="/products/:group/:type/:id"
+            component={ProductsDetail}
+          />
         </Main>
       </ContentWrapper>
     </Application>
