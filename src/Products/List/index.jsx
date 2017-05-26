@@ -19,7 +19,7 @@ export default () => (
           <CardCol>
             <Card
               img={require('./photos/shoes@2x.jpg')}
-              link="/detail"
+              link="/products/1"
               price="170"
               isSale
             />
@@ -27,28 +27,28 @@ export default () => (
           <CardCol>
             <Card
               img={require('./photos/shoes_3@2x.jpg')}
-              link="/detail"
+              link="/products/1"
               price="240.99"
             />
           </CardCol>
           <CardCol>
             <Card
               img={require('./photos/shoes@2x.jpg')}
-              link="/detail"
+              link="/products/1"
               price="1024"
             />
           </CardCol>
           <CardCol>
             <Card
               img={require('./photos/shoes@2x.jpg')}
-              link="/detail"
+              link="/products/1"
               price="170"
             />
           </CardCol>
           <CardCol>
             <Card
               img={require('./photos/shoes_2@2x.jpg')}
-              link="/detail"
+              link="/products/1"
               price="170"
               isSale
             />
@@ -56,7 +56,7 @@ export default () => (
           <CardCol>
             <Card
               img={require('./photos/shoes_3@2x.jpg')}
-              link="/detail"
+              link="/products/1"
               price="170"
             />
           </CardCol>
