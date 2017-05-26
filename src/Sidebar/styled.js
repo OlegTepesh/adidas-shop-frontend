@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const BrandLogoLink = styled(Link)`
   position: relative;
@@ -94,7 +94,7 @@ const Dropdown = styled.button`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledNavLink = styled(NavLink)`
   display: block;
   text-transform: uppercase;
   font-size: 24px;
@@ -102,11 +102,14 @@ const StyledLink = styled(Link)`
   font-family: 'AndaleMono';
   font-weight: normal;
   transition: 0.3s color ease-out;
-  color: ${props => (props.isActive ? '#fff' : '#3c3c3c')};
+  color: #3c3c3c;
   text-decoration: none;
   margin-top: 25px;
   &:hover {
     color: #fff;
+  }
+  &.active {
+    color: #fff
   }
 `;
 
@@ -133,6 +136,6 @@ export {
   Nav,
   StyledMenu,
   Dropdown,
-  StyledLink,
+  StyledNavLink,
   MenuButton,
 };
