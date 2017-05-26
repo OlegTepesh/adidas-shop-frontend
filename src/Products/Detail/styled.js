@@ -53,10 +53,11 @@ const CircleButton = styled.button`
   line-height: 25px;
   text-align: center;
   border-radius: 50%;
+  transition: .2s all ease-out;
   border: none;
   font-family: inherit;
   font-weight: inherit;
-  background-color: #e3e3e3;
+  background-color: ${props => props.color || '#e3e3e3'};
   color: #fff;
   &:focus {
     outline: 0;
@@ -77,11 +78,11 @@ const TopLine = styled.div`
   }
 `;
 
-const ColorPickerWrapper = styled.div`
+const ColorPicker = styled.div`
   display: inline-block;
 `;
 
-const ColorPicker = styled.button`
+const Color = styled.button`
   width: 18px;
   height: 18px;
   border: none;
@@ -109,9 +110,10 @@ const BottomLine = styled.div`
 
 const Price = styled.h2`
   font-size: 80px;
-  color: #e2e2e2;
   text-align: right;
   margin: 20px 0 0 0;
+  transition: .2s all ease-out;
+  color: ${props => props.color || '#e2e2e2'};
   @media (max-width: 992px) {
     line-height: 1;
     text-align: left;
@@ -133,9 +135,12 @@ const BigPhotoWrapper = styled.div`
 const BigPhoto = styled.img`
   max-width: 100%;
   height: auto;
+  max-height: 525px;
+  transition: .2s all ease-out;
 `;
 
 const Previews = styled.div`
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -145,8 +150,12 @@ const Previews = styled.div`
 `;
 
 const Photo = styled.img`
-  border: 5px solid transparent;
+  border: 5px solid  ${props => (props.isActive ? '#e7e7e7' : 'transparent')};
   margin-left: 15px;
+  margin-top: 10px;
+  max-height: 130px;
+  cursor: pointer;
+  transition: .2s all ease-out;
   &:hover {
     border: 5px solid #e7e7e7;
   }
@@ -156,54 +165,6 @@ const Photo = styled.img`
     width: 20%;
     margin-left: 10px;
   }
-`;
-
-const MorePhoto = styled.div`
-  display: flex;
-  align-content: center;
-  flex-wrap: nowrap;
-  min-height: 100px;
-  border: 5px solid transparent;
-  margin-left: 15px;
-  @media (max-width: 992px) {
-    display: none;
-  }
-`;
-
-const HamburgerButton = styled.button`
-  width: 160px;
-  border: none;
-  background: none;
-  border: 5px solid transparent;
-  margin-left: 15px;
-  &:hover {
-    border: 5px solid #e7e7e7;
-  }
-  @media (max-width: 992px) {
-    max-width: 100%;
-    height: 100%;
-    width: 20%;
-    margin-left: 10px;
-  }
-`;
-
-const HamburgerLine = styled.div`
-  width: 100%;
-  height: 3px;
-  border-radius: 1.5px;
-  background-color: #e7e7e7;
-  &+& {
-    margin-top: 3px;
-  }
-`;
-
-const MoreText = styled.div`
-  font-size: 14px;
-  font-weight: normal;
-  color: #c0c0c0;
-  text-align: left;
-  align-self: center;
-  margin-left: 30px;
 `;
 
 const DescriptionSection = styled.section`
@@ -261,8 +222,8 @@ export {
   Name,
   CircleButton,
   TopLine,
-  ColorPickerWrapper,
   ColorPicker,
+  Color,
   LabelWrapper,
   BottomLine,
   Price,
@@ -271,10 +232,6 @@ export {
   BigPhoto,
   Previews,
   Photo,
-  MorePhoto,
-  HamburgerButton,
-  HamburgerLine,
-  MoreText,
   DescriptionSection,
   TextAccent,
   BuyNowButton,
