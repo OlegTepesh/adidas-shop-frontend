@@ -30,13 +30,15 @@ const photos = [
 export default class extends Component {
   constructor(props) {
     super(props);
+    this.handleChangeColor = this.handleChangeColor.bind(this);
+
     this.state = {
       colorIndex: 0,
     };
   }
 
-  handleChangeColor(i) {
-    this.setState({ colorIndex: i });
+  handleChangeColor(colorIndex) {
+    this.setState({ colorIndex });
   }
 
   render() {
@@ -53,12 +55,7 @@ export default class extends Component {
           </HeadWrapper>
           <HeadWrapper>
             <TopLine>
-              <ColorPicker
-                colors={colors}
-                onChange={(i) => {
-                  this.handleChangeColor(i);
-                }}
-              />
+              <ColorPicker colors={colors} onChange={this.handleChangeColor} />
               <LabelWrapper>
                 <Label />
               </LabelWrapper>

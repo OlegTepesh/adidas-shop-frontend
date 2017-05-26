@@ -15,10 +15,8 @@ export default class extends Component {
     };
   }
 
-  handleChangePhoto(i) {
-    this.setState({
-      activePhotoIndex: i,
-    });
+  handleChangePhoto(activePhotoIndex) {
+    this.setState({ activePhotoIndex });
   }
 
   render() {

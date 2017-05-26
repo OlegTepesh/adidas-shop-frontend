@@ -150,7 +150,7 @@ const Previews = styled.div`
 `;
 
 const Photo = styled.img`
-  border: ${props => (props.isActive ? '5px solid #e7e7e7' : '5px solid transparent')};
+  border: 5px solid  ${props => (props.isActive ? '#e7e7e7' : 'transparent')};
   margin-left: 15px;
   margin-top: 10px;
   max-height: 130px;
