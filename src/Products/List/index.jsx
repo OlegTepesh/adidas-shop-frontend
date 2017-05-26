@@ -5,7 +5,7 @@ import Card from './Card';
 import ProductsGrid from './styled';
 
 const CardCol = props => (
-  <Col xs={12} sm={6} md={6} lg={3}>
+  <Col xs={12} sm={6} md={6} lg={4}>
     {props.children}
   </Col>
 );
