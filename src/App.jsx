@@ -15,6 +15,9 @@ export default () => (
         <Main>
           <Route exact path="/" component={ProductsList} />
           <Route path="/detail" component={ProductsDetail} />
+
+          <Route path="/products/:group/:type" component={ProductsList} />
+          <Route path="/products/:id" component={ProductsDetail} />
         </Main>
       </ContentWrapper>
     </Application>

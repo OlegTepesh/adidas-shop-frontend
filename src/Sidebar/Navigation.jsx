@@ -1,23 +1,23 @@
 import React from 'react';
 import Menu from './Menu';
-import { Nav, StyledLink as Link } from './styled';
+import { Nav, StyledNavLink as NavLink } from './styled';
 
 export default () => (
   <Nav>
     <Menu title="football">
-      <Link to="#">shoes</Link>
-      <Link to="#">clothing</Link>
-      <Link to="#">accessories</Link>
+      <NavLink to="/products/football/shoes">shoes</NavLink>
+      <NavLink to="/products/football/clothing">clothing</NavLink>
+      <NavLink to="/products/football/accessories">accessories</NavLink>
     </Menu>
     <Menu title="running">
-      <Link to="#">shoes</Link>
-      <Link to="#">clothing</Link>
-      <Link to="#">accessories</Link>
+      <NavLink to="/products/running/shoes">shoes</NavLink>
+      <NavLink to="/products/running/clothing">clothing</NavLink>
+      <NavLink to="/products/running/accessories">accessories</NavLink>
     </Menu>
     <Menu title="basketball">
-      <Link to="#">shoes</Link>
-      <Link to="#">clothing</Link>
-      <Link to="#">accessories</Link>
+      <NavLink to="/products/basketball/shoes">shoes</NavLink>
+      <NavLink to="/products/basketball/clothing">clothing</NavLink>
+      <NavLink to="/products/basketball/accessories">accessories</NavLink>
     </Menu>
   </Nav>
 );
