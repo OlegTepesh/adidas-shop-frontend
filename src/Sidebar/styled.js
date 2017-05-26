@@ -76,6 +76,7 @@ const Dropdown = styled.button`
   margin: auto;
   background: none;
   font-weight: bold;
+  font-family: 'AvenirNext';
   &:hover {
     color: #fff;
   }
