@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const Detail = styled.div`
-  padding: 25px 30px 115px;
+  padding-top: 25px;
+  padding-bottom: 115px;
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
   @media (max-width: 992px) {
-    padding: 35px 15px 75px;
+    padding-top: 30px;
+    padding-bottom: 75px;
   }
 `;
 
@@ -118,7 +122,7 @@ const Price = styled.h2`
   @media (max-width: 992px) {
     line-height: 1;
     text-align: left;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
   }
 `;
 
@@ -126,7 +130,7 @@ const PhotoSection = styled.section`
   text-align: center;
   padding-top: 50px;
   @media (max-width: 992px) {
-    padding-top: 15px;
+    padding-top: 30px;
   }
 `;
 
@@ -141,13 +145,9 @@ const BigPhoto = styled.img`
 `;
 
 const Previews = styled.div`
-  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: 992px) {
-    justify-content: flex-start;
-  }
 `;
 
 const Photo = styled.img`
@@ -211,6 +211,7 @@ const BuyNowButton = styled.button`
   }
   @media (max-width: 992px) {
     margin-left: 0;
+    font-size: 20px;
     width: 100%;
     height: 74px;
   }

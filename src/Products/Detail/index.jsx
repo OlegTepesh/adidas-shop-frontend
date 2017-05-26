@@ -24,7 +24,6 @@ const photos = [
   'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa1a41100/zoom/BA8842_02_standard.jpg',
   'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwba3c7ca9/zoom/BA8842_03_standard.jpg',
   'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw78a9db39/zoom/BA8842_04_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw1a4d7341/zoom/BA8842_05_standard.jpg',
 ];
 
 export default class extends Component {
