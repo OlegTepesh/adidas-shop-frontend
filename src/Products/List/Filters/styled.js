@@ -4,7 +4,7 @@ const Filters = styled.section`
   padding: 10px 32px;
   border-bottom: 3px solid rgba(231, 231, 231, .56);
   @media (max-width: 992px) {
-    padding: 15px;
+    padding: 1rem 2rem;
   }
 `;
 

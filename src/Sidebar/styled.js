@@ -38,7 +38,7 @@ const Aside = styled.aside`
   @media (max-width: 992px) {
     flex: 100%;
     max-width: 100%;
-    min-height: auto;
+    min-height: ${props => (props.isOpen ? 'auto' : '64px')};
     height: ${props => (props.isOpen ? 'auto' : '64px')};
     overflow: ${props => (props.isOpen ? 'visible' : 'hidden')};
     text-align: left;

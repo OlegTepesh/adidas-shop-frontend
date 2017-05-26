@@ -92,6 +92,7 @@ const Color = styled.button`
   cursor: pointer;
   transition: 0.1s all ease-out;
   background-color: ${props => props.color};
+  font-size: 0;
   &:hover {
     opacity: 0.7;
   }
