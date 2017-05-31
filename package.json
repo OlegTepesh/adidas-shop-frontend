@@ -18,7 +18,11 @@
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0",
     "husky": "^0.13.3",
+    "now": "^6.2.3",
     "react-scripts": "0.9.5"
+  },
+  "now": {
+    "alias": "adidasfront-demo"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,6 +30,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
-    "prepush": "npm run lint"
+    "prepush": "npm run lint",
+    "deploy": "now --public --token=$NOW_TOKEN && now ln --token=$NOW_TOKEN"
   }
 }
