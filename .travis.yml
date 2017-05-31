@@ -3,5 +3,8 @@ node_js:
   - "node"
 install:
   - npm install
+before_script:
+  - npm install -g now
 script:
   - npm run lint
+  - npm run deploy
