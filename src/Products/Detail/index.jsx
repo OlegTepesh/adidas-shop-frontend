@@ -13,27 +13,46 @@ import {
   BottomLine,
   Price,
   DescriptionSection,
-  TextAccent,
   BuyNowButton,
 } from './styled';
 
 const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
-
-const photos = [
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw773341ba/zoom/BA8842_01_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa1a41100/zoom/BA8842_02_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwba3c7ca9/zoom/BA8842_03_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw78a9db39/zoom/BA8842_04_standard.jpg',
-];
+const API = 'https://erodionov-adidas-fake-api.now.sh/v1';
+const imageLink = (id, fileName, height = 1024) =>
+  `http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/${id}/zoom/${fileName}?sh=${height}`;
 
 export default class extends Component {
   constructor(props) {
     super(props);
     this.handleChangeColor = this.handleChangeColor.bind(this);
+    this.fetchData = this.fetchData.bind(this);
 
     this.state = {
+      url: props.match.url,
       colorIndex: 0,
+      product: {},
+      photos: [],
     };
+  }
+
+  componentDidMount() {
+    this.fetchData(this.state.url);
+  }
+
+  fetchData(url) {
+    fetch(API + url).then(
+      (response) => {
+        response.json().then((data) => {
+          this.setState({
+            product: data,
+            photos: data.images.map(item => imageLink(item.id, item.fileName)),
+          });
+        });
+      },
+      (error) => {
+        console.error(error);
+      },
+    );
   }
 
   handleChangeColor(colorIndex) {
@@ -64,14 +83,10 @@ export default class extends Component {
             </BottomLine>
           </HeadWrapper>
         </HeadSection>
-        <PhotoSection photos={photos} />
+        <PhotoSection photos={this.state.photos} />
         <DescriptionSection>
           <p>
-            {' '}
-            <TextAccent>Adidas </TextAccent>
-            is a German multinational corporation, headquartered in Herzogenaurach,
-            Germany, that designs and manufactures shoes, clothing and accessories.
-            {' '}
+            {this.state.product.description}
           </p>
         </DescriptionSection>
         <BuyNowButton>Buy now</BuyNowButton>
