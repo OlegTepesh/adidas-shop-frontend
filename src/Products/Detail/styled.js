@@ -37,6 +37,7 @@ const HeadWrapper = styled.div`
 
 const Name = styled.h1`
   font-size: 64px;
+  text-transform: uppercase;
   color: #3a3a3a;
   line-height: 1;
   margin: 0 0 15px 0;

@@ -65,7 +65,7 @@ export default class extends Component {
         <HeadSection>
           <HeadWrapper>
             <Name>
-              ULTRA <br />BOOST
+              {this.state.product.title}
             </Name>
             <CircleButton color={colors[this.state.colorIndex]}>
               Save
@@ -79,7 +79,7 @@ export default class extends Component {
               </LabelWrapper>
             </TopLine>
             <BottomLine>
-              <Price color={colors[this.state.colorIndex]}>170$</Price>
+              <Price color={colors[this.state.colorIndex]}>{this.state.product.price}$</Price>
             </BottomLine>
           </HeadWrapper>
         </HeadSection>
