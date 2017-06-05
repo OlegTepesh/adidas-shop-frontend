@@ -21,7 +21,7 @@
     "react-scripts": "^1.0.7"
   },
   "now": {
-    "alias": "adidasfront-demo"
+    "alias": "otepesh-adidas-shop.now.sh"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +30,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint",
-    "deploy": "now --public --token=$NOW_TOKEN && now ln --token=$NOW_TOKEN"
+    "deploy": "now build --public --token=$NOW_TOKEN && now ln --token=$NOW_TOKEN"
   }
 }
