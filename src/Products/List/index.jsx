@@ -3,17 +3,14 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Filters from './Filters';
 import Card from './Card';
 import ProductsGrid from './styled';
-
-const API = 'https://erodionov-adidas-fake-api.now.sh/v1';
+import API from '../../api';
+import { imageLink } from '../../utils';
 
 const CardCol = props => (
   <Col xs={12} sm={6} md={6} lg={4}>
     {props.children}
   </Col>
 );
-
-const imageLink = (id, fileName, height = 512) =>
-  `http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/${id}/zoom/${fileName}?sh=${height}`;
 
 export default class extends Component {
   constructor(props) {

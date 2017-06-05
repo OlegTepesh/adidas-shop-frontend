@@ -15,11 +15,10 @@ import {
   DescriptionSection,
   BuyNowButton,
 } from './styled';
+import API from '../../api';
+import { imageLink } from '../../utils';
 
 const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
-const API = 'https://erodionov-adidas-fake-api.now.sh/v1';
-const imageLink = (id, fileName, height = 1024) =>
-  `http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/${id}/zoom/${fileName}?sh=${height}`;
 
 export default class extends Component {
   constructor(props) {
@@ -45,7 +44,7 @@ export default class extends Component {
         response.json().then((data) => {
           this.setState({
             product: data,
-            photos: data.images.map(item => imageLink(item.id, item.fileName)),
+            photos: data.images.map(item => imageLink(item.id, item.fileName, 1024)),
           });
         });
       },
