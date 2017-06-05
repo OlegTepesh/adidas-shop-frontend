@@ -28,6 +28,6 @@
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint",
     "nowstatic": "cat now-static.json > ./build/now.json",
-    "deploy": "now ./build --public --token=$NOW_TOKEN && now alias --token=$NOW_TOKEN"
+    "deploy": "now ./build --public --token=$NOW_TOKEN && cd build && now alias --token=$NOW_TOKEN"
   }
 }
