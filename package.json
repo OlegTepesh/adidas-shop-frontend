@@ -20,9 +20,6 @@
     "husky": "^0.13.3",
     "react-scripts": "^1.0.7"
   },
-  "now": {
-    "alias": "otepesh-adidas-shop.now.sh"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,6 +27,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint",
-    "deploy": "now build --public --token=$NOW_TOKEN && now ln --token=$NOW_TOKEN"
+    "nowstatic": "cat now-static.json > ./build/now.json",
+    "deploy": "now ./build --public --token=$NOW_TOKEN && now alias --token=$NOW_TOKEN"
   }
 }
