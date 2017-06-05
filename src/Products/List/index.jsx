@@ -18,12 +18,11 @@ export default class extends Component {
     this.fetchData = this.fetchData.bind(this);
     this.state = {
       products: [],
-      url: props.match.url,
     };
   }
 
   componentDidMount() {
-    this.fetchData(this.state.url);
+    this.fetchData(this.props.match.url);
   }
 
   componentWillReceiveProps(nextProps) {

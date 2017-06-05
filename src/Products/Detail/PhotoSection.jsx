@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  PhotoSection,
-  BigPhotoWrapper,
-  BigPhoto,
-  Previews,
-  Photo,
-} from './styled';
+import { PhotoSection, BigPhotoWrapper, BigPhoto, Previews, Photo } from './styled';
 
 export default class extends Component {
   constructor(props) {
@@ -23,10 +17,7 @@ export default class extends Component {
     return (
       <PhotoSection>
         <BigPhotoWrapper>
-          <BigPhoto
-            src={this.props.photos[this.state.activePhotoIndex]}
-            alt=""
-          />
+          <BigPhoto src={this.props.photos[this.state.activePhotoIndex]} alt="" />
         </BigPhotoWrapper>
         <Previews activePhotoIndex={this.state.activePhotoIndex}>
           {this.props.photos.map((photo, i) => (

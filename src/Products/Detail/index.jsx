@@ -20,6 +20,13 @@ import { imageLink } from '../../utils';
 
 const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
 
+const transformInputValues = (obj) => {
+  const transformed = Object.assign({}, obj);
+  transformed.price = obj.price / 100;
+  transformed.images = obj.images.map(item => imageLink(item.id, item.fileName, 1024));
+  return transformed;
+};
+
 export default class extends Component {
   constructor(props) {
     super(props);
@@ -27,15 +34,15 @@ export default class extends Component {
     this.fetchData = this.fetchData.bind(this);
 
     this.state = {
-      url: props.match.url,
       colorIndex: 0,
-      product: {},
-      photos: [],
+      product: {
+        images: [],
+      },
     };
   }
 
   componentDidMount() {
-    this.fetchData(this.state.url);
+    this.fetchData(this.props.match.url);
   }
 
   fetchData(url) {
@@ -43,8 +50,7 @@ export default class extends Component {
       (response) => {
         response.json().then((data) => {
           this.setState({
-            product: data,
-            photos: data.images.map(item => imageLink(item.id, item.fileName, 1024)),
+            product: transformInputValues(data),
           });
         });
       },
@@ -82,7 +88,7 @@ export default class extends Component {
             </BottomLine>
           </HeadWrapper>
         </HeadSection>
-        <PhotoSection photos={this.state.photos} />
+        <PhotoSection photos={this.state.product.images} />
         <DescriptionSection>
           <p>
             {this.state.product.description}
