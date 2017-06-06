@@ -33,7 +33,7 @@ export default class extends Component {
     fetch(API + url).then(
       (response) => {
         response.json().then((data) => {
-          this.setState({ url, products: data.items });
+          this.setState({ url, products: data.items.map(item => item) });
         });
       },
       (error) => {

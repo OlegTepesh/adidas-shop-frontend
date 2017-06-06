@@ -20,12 +20,11 @@ import { imageLink } from '../../utils';
 
 const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
 
-const transformInputValues = (obj) => {
-  const transformed = Object.assign({}, obj);
-  transformed.price = obj.price / 100;
-  transformed.images = obj.images.map(item => imageLink(item.id, item.fileName, 1024));
-  return transformed;
-};
+const transformInputValues = product => ({
+  ...product,
+  price: product.price / 100,
+  images: product.images.map(item => imageLink(item.id, item.fileName, 1024)),
+});
 
 export default class extends Component {
   constructor(props) {
