@@ -13,27 +13,44 @@ import {
   BottomLine,
   Price,
   DescriptionSection,
-  TextAccent,
   BuyNowButton,
 } from './styled';
+import API from '../../api';
+import { transformInputValues } from '../utils';
 
 const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
-
-const photos = [
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw773341ba/zoom/BA8842_01_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa1a41100/zoom/BA8842_02_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwba3c7ca9/zoom/BA8842_03_standard.jpg',
-  'http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw78a9db39/zoom/BA8842_04_standard.jpg',
-];
 
 export default class extends Component {
   constructor(props) {
     super(props);
     this.handleChangeColor = this.handleChangeColor.bind(this);
+    this.fetchData = this.fetchData.bind(this);
 
     this.state = {
       colorIndex: 0,
+      product: {
+        images: [{ full: '', preview: '' }],
+      },
     };
+  }
+
+  componentDidMount() {
+    this.fetchData(this.props.match.url);
+  }
+
+  fetchData(url) {
+    fetch(`${API}v1${url}`).then(
+      (response) => {
+        response.json().then((data) => {
+          this.setState({
+            product: transformInputValues(data),
+          });
+        });
+      },
+      (error) => {
+        console.error(error);
+      },
+    );
   }
 
   handleChangeColor(colorIndex) {
@@ -46,7 +63,7 @@ export default class extends Component {
         <HeadSection>
           <HeadWrapper>
             <Name>
-              ULTRA <br />BOOST
+              {this.state.product.title}
             </Name>
             <CircleButton color={colors[this.state.colorIndex]}>
               Save
@@ -60,18 +77,14 @@ export default class extends Component {
               </LabelWrapper>
             </TopLine>
             <BottomLine>
-              <Price color={colors[this.state.colorIndex]}>170$</Price>
+              <Price color={colors[this.state.colorIndex]}>{this.state.product.price}$</Price>
             </BottomLine>
           </HeadWrapper>
         </HeadSection>
-        <PhotoSection photos={photos} />
+        <PhotoSection photos={this.state.product.images} />
         <DescriptionSection>
           <p>
-            {' '}
-            <TextAccent>Adidas </TextAccent>
-            is a German multinational corporation, headquartered in Herzogenaurach,
-            Germany, that designs and manufactures shoes, clothing and accessories.
-            {' '}
+            {this.state.product.description}
           </p>
         </DescriptionSection>
         <BuyNowButton>Buy now</BuyNowButton>

@@ -37,6 +37,7 @@ const HeadWrapper = styled.div`
 
 const Name = styled.h1`
   font-size: 64px;
+  text-transform: uppercase;
   color: #3a3a3a;
   line-height: 1;
   margin: 0 0 15px 0;
@@ -73,6 +74,7 @@ const CircleButton = styled.button`
 
 const TopLine = styled.div`
   padding-top: 10px;
+  text-align: right;
   @media (max-width: 992px) {
     padding-top: 0;
     display: flex;
@@ -84,6 +86,7 @@ const TopLine = styled.div`
 
 const ColorPicker = styled.div`
   display: inline-block;
+  margin-bottom: 5px;
 `;
 
 const Color = styled.button`
