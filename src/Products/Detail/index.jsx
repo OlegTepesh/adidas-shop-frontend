@@ -1,3 +1,4 @@
+/* eslint no-console: ["error", { allow: ["error"] }] */
 import React, { Component } from 'react';
 import Label from '../../components/Label';
 import ColorPicker from './ColorPicker';
@@ -16,15 +17,9 @@ import {
   BuyNowButton,
 } from './styled';
 import API from '../../api';
-import { imageLink } from '../../utils';
+import { transformInputValues } from '../../utils';
 
 const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
-
-const transformInputValues = product => ({
-  ...product,
-  price: product.price / 100,
-  images: product.images.map(item => imageLink(item.id, item.fileName, 1024)),
-});
 
 export default class extends Component {
   constructor(props) {
@@ -35,7 +30,7 @@ export default class extends Component {
     this.state = {
       colorIndex: 0,
       product: {
-        images: [],
+        images: [{ full: '', preview: '' }],
       },
     };
   }

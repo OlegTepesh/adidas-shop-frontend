@@ -74,6 +74,7 @@ const CircleButton = styled.button`
 
 const TopLine = styled.div`
   padding-top: 10px;
+  text-align: right;
   @media (max-width: 992px) {
     padding-top: 0;
     display: flex;
@@ -85,6 +86,7 @@ const TopLine = styled.div`
 
 const ColorPicker = styled.div`
   display: inline-block;
+  margin-bottom: 5px;
 `;
 
 const Color = styled.button`
