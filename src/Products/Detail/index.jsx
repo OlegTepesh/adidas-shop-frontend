@@ -45,7 +45,7 @@ export default class extends Component {
   }
 
   fetchData(url) {
-    fetch(API + url).then(
+    fetch(`${API}v1${url}`).then(
       (response) => {
         response.json().then((data) => {
           this.setState({
