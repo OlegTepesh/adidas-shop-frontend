@@ -1,11 +1,10 @@
-/* eslint no-console: ["error", { allow: ["error"] }] */
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Filters from './Filters';
 import Card from './Card';
 import ProductsGrid from './styled';
 import API from '../../api';
-import { transformInputValues } from '../../utils';
+import { transformInputValues } from '../utils';
 
 const CardCol = props => (
   <Col xs={12} sm={6} md={6} lg={4}>
