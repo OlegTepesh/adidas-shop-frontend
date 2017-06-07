@@ -10,4 +10,4 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: npm run deploystatic
+  script: npm run deployserver
