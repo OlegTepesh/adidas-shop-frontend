@@ -8,4 +8,6 @@ before_script:
 script:
   - npm run lint
 deploy:
-  - npm run deploystatic
+  provider: script
+  skip_cleanup: true
+  script: npm run deploystatic
