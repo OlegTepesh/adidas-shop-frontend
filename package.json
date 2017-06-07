@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint",
-    "nowstatic": "cp -fv now-static.json ./build/now.json",
-    "deploy": "now ./build --public --token=$NOW_TOKEN && cd build && now alias --token=$NOW_TOKEN"
+    "deployserver": "now --public --token=$NOW_TOKEN && now alias --token=$NOW_TOKEN",
+    "deploystatic": "npm run build && cp -fv now.json ./build/now.json && now ./build --public --token=$NOW_TOKEN && cd build && now alias --token=$NOW_TOKEN"
   }
 }

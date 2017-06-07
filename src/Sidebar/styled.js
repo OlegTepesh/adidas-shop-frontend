@@ -126,20 +126,12 @@ const MenuButton = styled.button`
     cursor: pointer;
     display: block;
     position: absolute;
-    right: 2.5rem;
-    top: 17px;
+    right: 2rem;
+    top: 12px;
     width: 40px;
-    height: 30px;
+    height: 40px;
+    padding: 0;
   }
 `;
 
-export {
-  BrandLogo,
-  BrandLogoLink,
-  Aside,
-  Nav,
-  StyledMenu,
-  Dropdown,
-  StyledNavLink,
-  MenuButton,
-};
+export { BrandLogo, BrandLogoLink, Aside, Nav, StyledMenu, Dropdown, StyledNavLink, MenuButton };
