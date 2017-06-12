@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Filters from './Filters';
 import Card from './Card';
 import ProductsGrid from './styled';
 import API from '../../api';
@@ -47,7 +46,6 @@ export default class extends Component {
   render() {
     return (
       <div>
-        <Filters />
         <ProductsGrid>
           <Grid fluid>
             <Row>
